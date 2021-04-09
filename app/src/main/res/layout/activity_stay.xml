@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="30sp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_btn_stay_recomm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="추천"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#a0a0a0"
+                />
+
+            <View
+                android:layout_width="40sp"
+                android:layout_height="5sp"
+                android:background="#000"
+                android:layout_marginTop="5sp"
+                android:visibility="invisible"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:id="@+id/tv_btn_stay_travel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="여행"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:layout_marginLeft="30sp"
+                android:layout_weight="1"
+                />
+
+
+            <View
+                android:layout_width="40sp"
+                android:layout_height="5sp"
+                android:background="#000"
+                android:layout_marginLeft="30sp"
+                android:layout_marginTop="5sp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_btn_stay_mypageSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MY"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#a0a0a0"
+            android:layout_marginLeft="180sp"
+            />
+    </LinearLayout>
+
+    <!--    드슈, 사슈, 자슈, 타슈-->
+    <LinearLayout
+        android:layout_marginTop="10sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_btn_stay_res"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:gravity="center_horizontal"
+            android:text="드슈" />
+
+        <TextView
+            android:id="@+id/tv_btn_stay_do"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="하슈"
+            android:textColor="#000"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/tv_btn_stay_goods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:gravity="center_horizontal"
+            android:text="사슈" />
+
+        <TextView
+            android:id="@+id/tv_btn_stay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#3990ff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:text="자슈" />
+
+        <TextView
+            android:id="@+id/tv_btn_stay_ride"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:gravity="center_horizontal"
+            android:text="타슈" />
+    </LinearLayout>
+
+    <!--   자슈 리사이클러뷰 리니어-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/stay_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_stay" />
+    </LinearLayout>
+
+</LinearLayout>
